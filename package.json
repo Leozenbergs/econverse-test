@@ -1,11 +1,12 @@
 {
   "name": "econverse",
   "version": "1.0.0",
-  "description": "Homepage fot eConverse test",
+  "description": "Homepage for eConverse test",
   "main": "scripts.js",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
