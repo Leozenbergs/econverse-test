@@ -1,0 +1,23 @@
+{
+  "name": "econverse",
+  "version": "1.0.0",
+  "description": "Homepage fot eConverse test",
+  "main": "scripts.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leozenbergs/econverse-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leozenbergs/econverse-test/issues"
+  },
+  "homepage": "https://github.com/Leozenbergs/econverse-test#readme"
+}
