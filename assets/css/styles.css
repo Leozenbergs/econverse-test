@@ -49,8 +49,12 @@ body {
 .absolute {
   position: absolute; }
 
-.img-responsive {
+.img-banner {
   min-width: 55%;
+  max-width: 100%; }
+
+.img-responsive {
+  min-width: 100%;
   max-width: 100%; }
 
 .m-0 {
@@ -330,11 +334,19 @@ body {
   padding: 15px;
   border-bottom: 1px solid #c3d1d8; }
 
+@media only screen and (max-width: 1024px) {
+  .bottom__footer {
+    display: inline-block !important; }
+  .card__button--plus {
+    bottom: 66px !important; } }
+
 @media only screen and (max-width: 768px) {
   .nav_row .flex {
     display: inline-block; }
   .navbar__items--item {
-    font-size: 8px; } }
+    font-size: 8px; }
+  #plus .flex {
+    display: inline-block; } }
 
 @media only screen and (max-width: 425px) {
   .navbar__items--item, .separator {
@@ -348,4 +360,9 @@ body {
     z-index: 10;
     left: 0;
     top: 45px;
-    list-style: none; } }
+    list-style: none; }
+  .card__button--plus {
+    bottom: 50px !important;
+    padding: 10px 15px !important; }
+  #spotlights .flex, #vantagens .flex {
+    flex-direction: column; } }
