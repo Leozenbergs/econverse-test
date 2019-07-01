@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap')
 @import "mixins.sass"
+
+$line-color: #c3d1d8
+
 *
     font-family: 'Montserrat', Verdana, sans-serif
+    outline: none
 
 // Nav button animations
-.bar1, .bar2, .bar3 
+.bar1, .bar2, .bar3
   width: 20px
   height: 2px
   background-color: #333
@@ -12,14 +16,14 @@
   transition: 0.4s
   z-index: 100
 .collapse-btn
-    z-index: 100 
-.active 
-    .bar1 
+    z-index: 100
+.active
+    .bar1
         -webkit-transform: rotate(-45deg) translate(-3px, 6px)
         transform: rotate(-45deg) translate(-3px, 6px)
-    .bar2 
+    .bar2
         opacity: 0
-    .bar3 
+    .bar3
         -webkit-transform: rotate(45deg) translate(-2px, -8px)
         transform: rotate(45deg) translate(-3px, -8px)
 
@@ -27,11 +31,12 @@
 body
     margin: 0px
 .container
-    width: 90%
+    width: 80%
     margin: 0 auto
     padding: 0px 15px
 .container-fluid
-    width: 100%
+    width: 95%
+    padding: 0 2.5%
 // aux classes
 .visible-xs, #navbar__mobile
     display: none
@@ -50,8 +55,16 @@ body
     margin-top: 10px
 .mb-10
     margin-bottom: 10px
+.mb-5
+    margin-bottom: 5px
 .mt-40
     margin-top: 40px
+.mb-40
+    margin-bottom: 40px
+.mb-30
+    margin-bottom: 30px
+.mt-60
+    margin-top: 60px
 .mt-30
     margin-bottom: 30px
 .mt-5
@@ -134,7 +147,7 @@ body
     border-bottom: 1px solid #c6c6c6
     ul li
         padding: 15px
-        &.active            
+        &.active
             border-bottom: 1px solid #000
 .anuncio_index
     width: 100%
@@ -142,6 +155,13 @@ body
         object-fit: cover
 .banner__button
     @include btn_main
+#novidades-carousel .slick-slide img
+    display: block
+    max-height: 600px
+    max-width: 330px
+
+.slick-slide img
+    width: 100%
 .slick-prev
     background: transparent
     left: 0px
@@ -155,6 +175,7 @@ body
     width: 75px
     transform: rotate(45deg)
     z-index: 999
+    cursor: pointer
 .slick-next
     background: transparent
     right: 0px
@@ -168,21 +189,34 @@ body
     transform: rotate(-45deg)
     width: 75px
     z-index: 999
+    cursor: pointer
 .card__title .title
     font-size: 18px
     font-weight: normal
 .card__button
-    border: 1px solid #333
+    border: 2px solid #333
     padding: 15px 30px
     background: transparent
     font-size: 13px
+    font-weight: 600
     transition: all ease .4s
-    &:hover 
+    &:hover
         background: #000
         color: #fff
+
+.card__button--plus
+    bottom: 95px !important
+    padding: 20px 35px !important
+    font-size: 16px
+
 .slick-slider
     display: flex !important
     align-items: center
+#about article
+     line-height: 200%
+.about__title
+    font-size: 35px
+    letter-spacing: 4px
 #imgMain
     visibility: hidden
     transition: all ease .4s
@@ -191,14 +225,58 @@ body
         visibility: visible
         opacity: 1
 
-@media only screen and (max-width: 768px) 
+.plus__img
+    width: 94%
+
+#newsletter .newsletter
+    background: #f0f0f0
+    padding: 38px 50px
+    .newsletter__txt
+        font-size: 18px
+    form input
+        width: 40%
+        padding: 15px
+    #submit-news
+        padding: 15px 35px
+        color: #fff
+        background: #000
+        border: none
+        font-size: 15px
+
+#footer
+    border-top: 1px solid $line-color
+    .title
+        letter-spacing: 2px
+    .bottom__footer
+        padding-bottom: 25px
+        border-bottom: 1px solid $line-color
+    ul
+        list-style: none !important
+    .assignature
+        article
+            max-width: 50%
+            font-size: 10px
+        .logos
+            width: 50%
+
+.marcas .marca, #footer .categoria, #footer .footer__item
+    list-style: none
+    font-size: 14px
+.footer__glossary
+    padding: 15px
+    border-bottom: 1px solid $line-color
+
+
+
+
+@media only screen and (max-width: 768px)
     .nav_row
         .flex
             display: inline-block
     .navbar__items--item
         font-size: 8px
-        
-@media only screen and (max-width: 425px) 
+
+@media only screen and (max-width: 425px)
     .navbar__items--item, .separator
         display: none
     .brand
