@@ -1,12 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 </head>
 <body>
+    <header>
+        <div class="w-full bg-white txt-black">
+            <div class="container">
+                <nav class="navbar mt-10">
+                    <div class="nav_row inline txt-center">
+                        <ul class="navbar__upper inline txt-left pull-left m-0 p-0">
+                            <li class="navbar__items--item inline-block ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Atendimento</a>
+                            </li>
+                            <hr class="separator bg-black inline-block m-0">
+                            <li class="navbar__items--item inline-block ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Ajuda</a>
+                            </li>                        
+                        </ul>
 
+                        <div class=" inline-block mt-10 mb-10 brand">
+                            <a href="" class="txt-center">
+                                <img src="assets/images/logo.png" alt="" class="img-responsive">
+                            </a>
+                        </div>
+
+                        <ul class="navbar__upper inline txt-right pull-right m-0 p-0">
+                            <li class="navbar__items--item inline-block ml-5 mr-5 txt-uppercase">
+                                <img src="assets/images/icons/search.png" alt="">
+                            </li>
+                            <li class="navbar__items--item inline-block ml-5 mr-5 txt-uppercase">
+                                <img src="assets/images/icons/user.png" alt="">
+                            </li>       
+                            <li class="navbar__items--item inline-block ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Sacola</a>
+                            </li>
+                            <hr class="separator bg-black inline-block m-0">
+                            <li class="navbar__items--item inline-block ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Itens</a>
+                            </li>                        
+                        </ul>
+
+                        <ul id="navbar__mobile" class="absolute bg-white w-full p-0">
+                            <li class="navbar__mobile--item txt-left mt-5">
+                                <a href="" class="txt-uppercase txt-black ml-5">Feminino</a>
+                            </li>
+                            <li class="navbar__mobile--item txt-left mt-5">
+                                <a href="" class="txt-uppercase txt-black ml-5">Masculino</a>
+                            </li>
+                            <li class="navbar__mobile--item txt-left mt-5">
+                                <a href="" class="txt-uppercase txt-black ml-5">Infanto juvenil</a>
+                            </li>
+                            <li class="navbar__mobile--item txt-left mt-5">
+                                <a href="" class="txt-uppercase txt-black ml-5">Gestante</a>
+                            </li>
+                            <li class="navbar__mobile--item txt-left mt-5">
+                                <a href="" class="txt-uppercase txt-black ml-5">Marcas</a>
+                            </li>
+                            <li class="navbar__mobile--item txt-left mt-5">
+                                <a href="" class="txt-uppercase txt-black ml-5">Mais vendidos</a>
+                            </li>
+                            <li class="navbar__mobile--item txt-left mt-5">
+                                <a href="" class="txt-uppercase txt-black ml-5">Lançamentos</a>
+                            </li>
+                            <li class="navbar__mobile--item txt-left mt-5">
+                                <a href="" class="txt-uppercase txt-black ml-5">Outlet</a>
+                            </li>
+                        </ul>
+                        <div class="pull-right visible-xs">
+                            <div class="collapse-btn mt-10 inline-block" onclick="toggleNav(this)">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="nav_row inline txt-center">
+                        <ul class="navbar__items flex align-center-v space-between m-0 p-0">
+                            <li class="navbar__items--item ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Feminino</a>
+                            </li>
+                            <li class="navbar__items--item ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Masculino</a>
+                            </li>             
+                            <li class="navbar__items--item ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Infanto juvenil</a>
+                            </li>
+                            <li class="navbar__items--item ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Gestante</a>
+                            </li>          
+                            <li class="navbar__items--item ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Marcas</a>
+                            </li>
+                            <li class="navbar__items--item ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Mais vendidos</a>
+                            </li>          
+                            <li class="navbar__items--item ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Lançamentos</a>
+                            </li>
+                            <li class="navbar__items--item ml-5 mr-5 txt-uppercase">
+                                <a href="" class="txt-black">Outlet</a>
+                            </li>                     
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="anuncio_index" id="imgMain">
+        <div class="txt-left">
+            <button type="button" class="banner__button pointer absolute txt-black txt-uppercase">
+                Clique e confira
+            </button>
+            <img src="assets\images\anuncio_main.jpg" alt="Banner" />
+        </div>
+        <div class="txt-left">
+            <button type="button" class="banner__button pointer absolute txt-black txt-uppercase">
+                Clique e confira
+            </button>
+            <img src="assets\images\anuncio_main.jpg" alt="Banner" />
+        </div>
+    </div>
+
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
 </body>
 </html>
