@@ -2,11 +2,26 @@
 var gulp = require('gulp');
 // Requires the gulp-sass plugin
 var sass = require('gulp-sass');
-
-gulp.task('sass', function(){
+// main task
+gulp.task('main', function(){
     return gulp.src('assets/sass/styles.sass')
-      .pipe(sass()) // Converts Sass to CSS with gulp-sass
+      .pipe(sass().on('error', sass.logError)) // Converts Sass to CSS with gulp-sass
       .pipe(gulp.dest('assets/css'))
 });
 
-// gulp.task('sass:watch', function() { gulp.watch('app/sass/app.sass', ['sass']);});
+// mixins task
+gulp.task('mixins', function(){
+  return gulp.src('assets/sass/mixins.sass')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('assets/css'))
+});
+
+//Watch main task
+gulp.task('watch-sass',function() {
+  gulp.watch('assets/sass/styles.sass', gulp.series('main'));
+});
+
+//Watch mixins task
+gulp.task('watch-mixins',function() {
+gulp.watch('assets/sass/mixins.sass', gulp.series('mixins'));
+});
